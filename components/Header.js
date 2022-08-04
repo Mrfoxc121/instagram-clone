@@ -1,6 +1,7 @@
 import React from "react";
 import { input } from "@tailwindcss/forms";
-import { SearchIcon } from "@heroicons/react/outline";
+import { SearchIcon, PlusCircleIcon } from "@heroicons/react/outline";
+import { HomeIcon} from "@heroicons/react/solid";
 import Image from "next/image";
 
 export default function Header() {
@@ -30,7 +31,11 @@ export default function Header() {
       </div>
 
       {/* right */}
-      <h1>right side</h1>
+      <div className="flex space-x-4 items-center">
+        <HomeIcon className="hidden md:inline-flex h-7 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+        <PlusCircleIcon className="h-7 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+        <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1600" className="h-10 w-10 rounded-full cursor-pointer" />
+      </div>
     </div>
   );
 }
