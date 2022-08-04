@@ -1,11 +1,12 @@
 import React from "react";
+import { input } from "@tailwindcss/forms";
+import { SearchIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 
 export default function Header() {
   return (
-    // Left
-
-    <div className="flex justify-between items-center max-w-6xl">
+    <div className="flex justify-between items-center max-w-7xl mx-4 xl:mx-auto">
+      {/* left */}
       <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png"
@@ -20,11 +21,16 @@ export default function Header() {
           className="object-contain"
         />
       </div>
+      {/* middle */}
+      <div className="relative">
+        <div className="absolute top-1.5 left-2 mt-1">
+            <SearchIcon className="h-5 text-gray-500 " />
+        </div>
+        <input type="text" placeholder="Search" className="bg-gray-50 pl-10 border-gray-500 text-sm rounded-md focus:ring-black focus:border-black"/>
+      </div>
+
+      {/* right */}
       <h1>right side</h1>
     </div>
-
-    // Middle
-
-    // Right
   );
 }
