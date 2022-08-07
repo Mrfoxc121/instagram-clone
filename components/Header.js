@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="sticky shadow-sm border-b top-0">
+    <div className="sticky shadow-sm border-b top-0 bg-white">
       <div className="flex justify-between items-center max-w-7xl mx-4 xl:mx-auto">
         {/* left */}
         <div className="cursor-pointer h-24 w-24 relative hidden lg:inline-grid">

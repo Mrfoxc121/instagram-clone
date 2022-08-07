@@ -1,7 +1,18 @@
-import React from 'react'
+import React from "react";
+import Stories from "./Stories";
 
 export default function Feed() {
   return (
-    <div>Feed</div>
-  )
+    <main className="">
+      <section className="">
+        {/* stories */}
+        <Stories />
+        {/* posts */}
+      </section>
+      <section className="">
+        {/* mini profile */}
+        {/* sugestions */}
+      </section>
+    </main>
+  );
 }
