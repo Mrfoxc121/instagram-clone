@@ -1,4 +1,9 @@
-import { DotsHorizontalIcon } from "@heroicons/react/solid";
+import {
+  DotsHorizontalIcon,
+  HeartIcon,
+  ChatIcon,
+  BookmarkIcon,
+} from "@heroicons/react/outline";
 
 export default function Post({ id, username, userImg, img, caption }) {
   return (
@@ -15,7 +20,16 @@ export default function Post({ id, username, userImg, img, caption }) {
         <DotsHorizontalIcon className="h-5" />
       </div>
       <img className="object-cover w-full" src={img} alt="" />
-    </div>
 
+      {/* Post buttons */}
+      <div className="flex justify-between p-4">
+        <div className=" flex space-x-4 ">
+          <HeartIcon className="btn" />
+          <ChatIcon className="btn" />
+          
+        </div>
+        <BookmarkIcon className="btn" />
+      </div>
+    </div>
   );
 }
